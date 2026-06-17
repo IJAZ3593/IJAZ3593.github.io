@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Malik Ijaz | Developer Portfolio</title>
+
+<style>
+/* =========================
+   GLOBAL THEME (CYBERPUNK)
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #05070f;
+  color: #e6f1ff;
+  overflow-x: hidden;
+}
+
+/* animated neon grid */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background:
+    linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveGrid 20s linear infinite;
+  z-index: -2;
+}
+
+@keyframes moveGrid {
+  from { transform: translate(0,0); }
+  to { transform: translate(-100px,-100px); }
+}
+
+/* glowing overlay */
+.glow-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top, rgba(0,255,255,0.15), transparent 60%);
+  z-index: -1;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.profile-wrap {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  margin: auto;
+}
+
+.ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#00f0ff, #7a00ff, #00f0ff);
+  animation: spin 3s linear infinite;
+  filter: blur(8px);
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.profile {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  object-fit: cover;
+  border: 3px solid #000;
+}
+
+h1 {
+  font-size: 42px;
+  margin-top: 20px;
+}
+
+.typing {
+  color: #00f0ff;
+  margin-top: 10px;
+  font-size: 18px;
+  height: 25px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 25px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(0,255,255,0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.08);
+}
+
+.section h2 {
+  color: #00f0ff;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   GRID SYSTEM
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card {
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(0,255,255,0.1);
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skill {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px solid #00f0ff;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  color: #00f0ff;
+  text-decoration: none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow-bg"></div>
+
+<!-- HERO -->
+<div class="hero">
+
+  <div class="profile-wrap">
+    <div class="ring"></div>
+    <img src="profile.png" class="profile"/>
+  </div>
+
+  <h1>Malik Ijaz</h1>
+  <div class="typing" id="typing"></div>
+</div>
+
+<!-- STORY -->
+<div class="section">
+  <h2>The Distance Between Two Points</h2>
+  <p>
+    I once deleted a fully funded Dubai opportunity at 2:47 AM. Not because I lacked ambition, but because I was trapped between identity and expectation.
+    <br><br>
+    25km daily commutes, academic failure, financial pressure, and late-night systems thinking shaped me more than any classroom ever could.
+    <br><br>
+    I didn’t become a developer through perfection — I became one through iteration, failure, and systems thinking.
+  </p>
+</div>
+
+<!-- ACHIEVEMENTS -->
+<div class="section">
+  <h2>Achievements</h2>
+  <div class="grid">
+
+    <div class="card">
+      🥈 UMT Hackathon<br>
+      Atlas.net & Thursday’s Next<br>
+      National Level – 2nd Position
+    </div>
+
+    <div class="card">
+      🏆 Google Gemini Hackathon<br>
+      Finalist – RIME 0.2
+    </div>
+
+    <div class="card">
+      ⚙ Code Catalyst Club<br>
+      Built automation tools for 200+ students
+    </div>
+
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+  <h2>Skills</h2>
+
+  <span class="skill">Python</span>
+  <span class="skill">JavaScript</span>
+  <span class="skill">C</span>
+  <span class="skill">C++</span>
+  <span class="skill">Bash</span>
+  <span class="skill">Linux</span>
+  <span class="skill">GitHub</span>
+  <span class="skill">HTML</span>
+  <span class="skill">CSS</span>
+  <span class="skill">DevOps Basics</span>
+  <span class="skill">Backend Systems</span>
+</div>
+
+<!-- GITHUB REPOS -->
+<div class="section">
+  <h2>GitHub Projects</h2>
+  <div class="grid" id="repos"></div>
+</div>
+
+<!-- GITHUB STATS -->
+<div class="section">
+  <h2>GitHub Stats</h2>
+
+  <img width="100%" src="https://github-readme-stats.vercel.app/api?username=IJAZ3593&show_icons=true&theme=tokyonight"/>
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+  <h2>Connect</h2>
+  <p>
+    GitHub: <a href="https://github.com/IJAZ3593">IJAZ3593</a>
+  </p>
+</div>
+
+<footer>
+  “Systems built from failure become systems that outlast success.”
+</footer>
+
+<script>
+/* =========================
+   TYPING EFFECT
+========================= */
+const words = [
+  "Backend Developer",
+  "Automation Engineer",
+  "DevOps Learner",
+  "System Builder",
+  "Hackathon Finalist"
+];
+
+let i = 0, j = 0, isDeleting = false;
+
+function type() {
+  const el = document.getElementById("typing");
+  let word = words[i];
+
+  if (!isDeleting) {
+    el.innerHTML = word.substring(0, j++);
+    if (j > word.length) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+      return;
+    }
+  } else {
+    el.innerHTML = word.substring(0, j--);
+    if (j === 0) {
+      isDeleting = false;
+      i = (i + 1) % words.length;
+    }
+  }
+
+  setTimeout(type, isDeleting ? 50 : 80);
+}
+type();
+
+/* =========================
+   GITHUB API LOAD REPOS
+========================= */
+fetch("https://api.github.com/users/IJAZ3593/repos")
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("repos");
+
+    data.slice(0, 6).forEach(repo => {
+      const div = document.createElement("div");
+      div.className = "card";
+      div.innerHTML = `
+        <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+        <p>${repo.description || "No description provided."}</p>
+        ⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}
+      `;
+      container.appendChild(div);
+    });
+  });
+</script>
+
+</body>
+</html>
